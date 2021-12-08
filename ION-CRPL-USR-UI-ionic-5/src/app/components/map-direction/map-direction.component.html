@@ -1,0 +1,19 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<agm-map *ngIf="showMap" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false"
+  [zoomControl]="false">
+  <!-- <agm-overlay *ngFor="let stopover of waypoints" [latitude]="stopover.location.lat"
+    [longitude]="stopover.location.lng">
+    <div class="overlayStyle">
+      S</div>
+  </agm-overlay> -->
+  <agm-direction [origin]="pickupLocation" [destination]="dropLocation" [markerOptions]="markerOptions"
+    [waypoints]="waypoints">
+  </agm-direction>
+</agm-map>

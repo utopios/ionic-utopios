@@ -1,0 +1,38 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Edit Price</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item>
+      <ion-label class="ion-text-center">
+        <ion-text class="ion-text-wrap">{{header}}</ion-text>
+      </ion-label>
+    </ion-item>
+    <div class="flex">
+      <ion-item>
+        <ion-label>
+          <p class="ion-text-wrap">{{description}}</p>
+        </ion-label>
+      </ion-item>
+    </div>
+    <div class="buttonDiv">
+      <ion-button expand="block" color="secondary" (click)="gotoeditAmount()" class="ion-text-capitalize">edit the
+        amount
+      </ion-button>
+    </div>
+  </ion-list>
+</ion-content>

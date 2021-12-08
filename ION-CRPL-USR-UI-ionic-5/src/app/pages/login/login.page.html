@@ -1,0 +1,26 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-content>
+  <ion-card class="card_content">
+    <div class="image_set"
+      [ngStyle]="{'background':'url(assets/image/login.jpg)','background-size':'cover','background-position':'center'}">
+      <div class="overlay">
+        <p class="title_center">Carpool</p>
+      </div>
+    </div>
+    <ion-card-subtitle class="ion-text-center ion-padding">Carpooling takes the trek out of the journey
+    </ion-card-subtitle>
+    <ion-card-content class="button_row">
+      <ion-button fill="solid" class="ion-margin-bottom" expand="round" color="secondary" (click)="gotosignup()">Signup
+      </ion-button>
+      <ion-button fill="clear" expand="round" color="secondary" (click)="gotoLoginformHome()">Log In
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,35 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Anything more?</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flex">
+    <ion-list>
+      <ion-item>
+        <ion-text>{{head}}</ion-text>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Your message for passengers</ion-label>
+        <ion-textarea rows="6" cols="10" placeholder={{placeholder}} [(ngModel)]="returnDesc"></ion-textarea>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+<ion-footer class="ion-padding">
+  <ion-toolbar>
+    <ion-button mode="md" color="secondary" expand="block" (click)="rideSuccess()">CONTINUE</ion-button>
+  </ion-toolbar>
+</ion-footer>

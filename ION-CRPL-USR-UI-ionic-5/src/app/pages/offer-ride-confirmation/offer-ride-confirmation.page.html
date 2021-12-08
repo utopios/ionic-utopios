@@ -1,0 +1,27 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-content>
+  <div class="flex">
+    <div class="imageDiv"
+      [ngStyle]="{'background':'url( '+ confirmImage +')', 'background-size':'contain', 'background-position':'center', 'background-repeat':'no-repeat'}">
+    </div>
+    <ion-item>
+      <ion-text *ngIf="dataService.bookRideConfirmation">Your ride is now booked! Driver will now reach you soon on call
+        or
+        chat!</ion-text>
+      <ion-text *ngIf="!dataService.bookRideConfirmation">Your ride is now online! Passengers can now book and travel
+        with
+        you!</ion-text>
+    </ion-item>
+
+    <div (click)="onRideSuccess()" class="width">
+      <ion-button expand="round" type="submit" color="light">Ok</ion-button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,35 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-capitalize">edit preferences</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let prefer of preferenceData">
+      <ion-icon slot="start" mode="ios" name={{prefer.icon}} expand="icon-only" color="secondary"></ion-icon>
+      <ion-label>
+        <p>{{prefer.header}}</p>
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder={{prefer.placeholder}}
+          [(ngModel)]="prefer.list.model" mode="ios" class="ion-text-capitalize">
+          <ion-select-option *ngFor="let select of prefer.list" value={{select.chattiness}} selected>
+            {{select.chattiness}}
+          </ion-select-option>
+        </ion-select>
+      </ion-label>
+    </ion-item>
+    <ion-button class="ion-text-capitalize" expand="block" type="submit" color="secondary">Save Preference
+    </ion-button>
+  </ion-list>
+</ion-content>

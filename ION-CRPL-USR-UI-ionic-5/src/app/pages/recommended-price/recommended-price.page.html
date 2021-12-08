@@ -1,0 +1,45 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Price</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="headerContent">
+    <ion-item>
+      <ion-label>
+        <ion-text class="ion-text-wrap">{{headerText}}</ion-text>
+      </ion-label>
+    </ion-item>
+  </div>
+  <div class="count">
+    <ion-item>
+      <ion-label class="ion-text-center">
+        <ion-text class="moneyText"><span>₹</span>250.00</ion-text>
+        <p class="wrappable">{{locationService.pickupAddress.value}} </p>
+        <p>>></p>
+        <p class="wrappable">{{locationService.dropAddress.value}}</p>
+      </ion-label>
+    </ion-item>
+    <ion-label>
+      <ion-button mode="md" color="secondary" expand="block" (click)="askForReturn()">CONTINUE</ion-button>
+
+      <ion-button mode="md" class="ion-no-padding" color="secondary" (click)="notAgree()" expand="block" fill="clear">I
+        DON'T AGREE
+      </ion-button>
+
+    </ion-label>
+
+  </div>
+</ion-content>

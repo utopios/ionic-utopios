@@ -1,0 +1,43 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Stopovers</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-list>
+    <ion-item class="head">
+      <ion-label class="ion-text-center">
+        <ion-text>Do you want to add stopovers?</ion-text>
+      </ion-label>
+    </ion-item>
+    <div>
+      <ion-item *ngFor="let stopover of dataService.stopovers">
+        <ion-checkbox color="primary" [(ngModel)]="stopover.selected" slot="end"></ion-checkbox>
+        <p>{{stopover.address}}</p>
+      </ion-item>
+    </div>
+
+  </ion-list>
+</ion-content>
+<ion-footer class="ion-padding">
+  <ion-toolbar>
+    <ion-item class="ion-margin-bottom">
+      <ion-input type="text" readonly placeholder="Add stopovers and get more co-travellers"
+        (click)="goForStopovers('stopover')">
+      </ion-input>
+    </ion-item>
+    <ion-button expand="block" color="secondary" type="submit" (click)="goForStopoversRouteMap()">Confirm</ion-button>
+  </ion-toolbar>
+</ion-footer>

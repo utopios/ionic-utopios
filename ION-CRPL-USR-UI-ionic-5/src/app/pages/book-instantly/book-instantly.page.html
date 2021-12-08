@@ -1,0 +1,44 @@
+<!-- /**
+ * Car Pool starter (https://store.enappd.com/product/carpool-app-starter-ionic)
+ *
+ * Copyright © 2019-present Enappd. All rights reserved.
+ *
+ * This source code is licensed as per the terms found in the
+ * LICENSE.md file in the root directory of this source tree.
+ */ -->
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="start">
+      <ion-back-button text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title>Instant Booking</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="flex">
+    <div class="image_Div">
+      <ion-img src="assets/image/a.jpg"></ion-img>
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label class="ion-text-center">
+          <ion-text class="ion-text-wrap">{{book}}</ion-text>
+        </ion-label>
+      </ion-item>
+      <ion-item class="width" (click)="gotoPrice(true)">
+        <ion-button expand="full" fill="clear" class="width">
+          <ion-icon name="arrow-forward" expand="icon-only" color="secondary" slot="end" mode="ios"></ion-icon>
+          <p class="sureItem">Yeah, sure!</p>
+        </ion-button>
+      </ion-item>
+
+      <ion-item class="width" (click)="gotoPrice(false)">
+        <ion-button expand="full" fill="clear" class="width">
+          <ion-icon name="arrow-forward" expand="icon-only" color="secondary" slot="end" mode="ios"></ion-icon>
+          <p color="medium" class="reply">No, I'll reply to each request myself</p>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
